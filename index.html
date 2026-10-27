@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>校园印吧 · 江西师范大学科学技术学院</title>
+  <link rel="icon" href="assets/logo.jpg">
+  <link rel="apple-touch-icon" href="assets/logo.jpg">
+  <script>
+    try { document.documentElement.dataset.theme = localStorage.getItem('cp-theme') || 'light'; } catch (e) {}
+  </script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#/">
+      <img class="brand-mark" src="assets/logo.jpg" alt="江西师范大学科学技术学院校徽">
+      <span class="brand-text"><b>校园印吧</b><small>科学技术学院 · 在线文印</small></span>
+    </a>
+    <div class="topbar-spacer"></div>
+    <button class="icon-btn" id="theme-toggle" title="切换白天/夜间">☾</button>
+    <button class="btn primary" id="btn-upload-top" hidden>＋ 上传文件</button>
+    <button class="wallet" id="wallet-chip" hidden></button>
+    <div class="user" id="user-chip" hidden>
+      <span class="avatar" id="avatar">张</span>
+      <span class="user-name" id="user-name"></span>
+      <span class="user-role" id="user-role"></span>
+    </div>
+    <button class="btn ghost sm" id="btn-logout" hidden>退出</button>
+  </header>
+
+  <div class="shell">
+    <aside class="sidebar" id="sidebar"></aside>
+    <main class="main" id="view"></main>
+  </div>
+
+  <footer class="site-foot">
+    <span>江西师范大学科学技术学院</span>
+    <span class="version">校园印吧 v0.4</span>
+  </footer>
+
+  <div class="toast-stack" id="toast"></div>
+  <div class="modal-root" id="modal-root"></div>
+  <script src="mock-api.js"></script>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
